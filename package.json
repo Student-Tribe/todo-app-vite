@@ -1,0 +1,16 @@
+{
+  "name": "todo-vite-app",
+  "version": "1.0.0",
+  "description": "TodoApp",
+  "scripts": {
+    "dev":"vite dev"
+  },
+  "author": "Hari Rai",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^7.2.6"
+  },
+  "dependencies": {
+    "appwrite": "^21.4.0"
+  }
+}
