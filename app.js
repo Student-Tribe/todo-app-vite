@@ -76,7 +76,7 @@ async function addTask(e) {
         alert("Enter the task!!!!")
         return
     }
-
+    //creating a new row in the database
  const response=await db.createRow(
         databaseId,
         tableId,
