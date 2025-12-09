@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "TodoApp",
   "scripts": {
-    "dev":"vite dev"
+    "dev":"vite --host 0.0.0.0",
+    "build":"vite build"
   },
   "author": "Hari Rai",
   "license": "ISC",

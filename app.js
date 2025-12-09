@@ -38,10 +38,12 @@ async function renderTodos(task){
     const output=`<div class="taskwrapper" id="task-${task.$id}">
         <p class="complete-${task.isTaskDone}">${task.taskText}</p>
         <strong class="delete" id="delete-${task.$id}">x</strong>
+         <strong class="edit" id="edit-${task.$id}">edit</strong>
     </div>`
     todoList.insertAdjacentHTML('afterbegin' ,output)
     const update=document.getElementById(`task-${task.$id}`);
     const deleteBtn=document.getElementById(`delete-${task.$id}`);
+    const editbtn=document.getElementById(`edit-${task.$id}`)
     //adding event listener to delete button
     deleteBtn.addEventListener('click',()=>{
         db.deleteRow(
@@ -50,6 +52,14 @@ async function renderTodos(task){
             task.$id
         )
         update.remove();
+    })
+
+    editbtn.addEventListener('click',()=>{
+        db.updateRow(
+            tableId,
+            databaseId,
+            
+        )
     })
     //adding event listener to task to mark it complete/incomplete
     update.childNodes[1].addEventListener('click',async (event)=>{
